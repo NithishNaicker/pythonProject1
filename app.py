@@ -23,7 +23,7 @@ def predict():
 
     result = model.predict([[int(Symptom_1),int(Symptom_2),int(Symptom_3)]])
 
-    return str(result)
+    return jsonify({'disease':str(result)})
 
 if __name__ == '__main__':
     app.run(debug=True)
